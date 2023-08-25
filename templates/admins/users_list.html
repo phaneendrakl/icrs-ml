@@ -1,0 +1,81 @@
+{% extends 'admins/admin_base.html' %}
+
+{% block title %}
+    User's List
+{% endblock %}
+
+
+{% block content %}
+    <style>
+        .container {
+            font-family: "Book Antiqua";
+
+        }
+    </style>
+
+    {% load static %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped table-hover" style="margin-top: 10rem;">
+                    <caption align="top" style="text-align: center;font-size: 2rem;">User List</caption>
+                    <thead class="">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in users_list %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter0|add:users_list.start_index }}</th>
+                            <td>{{ user.name }}</td>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>
+                                <a href="{% url 'admins_:activate_user' user.id %}" class=" btn btn-link text-white">
+                                    {{ user.status }}
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+
+                <!-- Pagination-->
+                <div class="container p-4">
+                    <div class="pagination justify-content-center">
+                    <span class="step-links">
+                        {% if users_list.has_previous %}
+                            <a href="?page=1">&laquo; first </a>
+                            <a href="?page={{ users_list.previous_page_number }}"> previous &nbsp;</a>
+                        {% endif %}
+                    </span>
+                        <span class="current">
+                        Page{{ users_list.number }}  of  {{ users_list.paginator.num_pages }}
+                            &nbsp;
+                    </span>
+
+                        {% if users_list.has_next %}
+                            <a href="?page={{ users_list.next_page_number }}"> next &nbsp; </a>
+                            <a href="?page={{ users_list.paginator.num_pages }}"> last &raquo;</a>
+                        {% endif %}
+                    </div>
+                </div>
+                <!-- end of Pagination -->
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
+
+

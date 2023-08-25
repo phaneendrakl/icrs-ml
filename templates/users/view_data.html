@@ -1,0 +1,37 @@
+{% extends 'users/user_base.html' %}
+
+{% block title %}
+    User || view_data
+{% endblock %}
+
+{% block view_data %}
+    active
+{% endblock %}
+{% block content %}
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<section id="intro">
+<h3 align="center" style="color:green;font-weight:bold;">Datasets Here are:</h3>
+    <ol>
+        <li><a href="{% url 'users_:crop_recommendation'  %}"style="color:green">Crop_Recommendation.csv</a></li>
+        <li><a href="{% url 'users_:crop_sustainability3'  %}"style="color:green">Crop_Sustainability.csv</a></li>
+    </ol>
+  </section>
+    <br><br><br><br><br><br><br><br>
+{%endblock%}

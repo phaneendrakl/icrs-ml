@@ -1,0 +1,126 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="{% static 'images/favicon/crop.png' %}" type="image/x-icon">
+
+    <!-- Css Link-->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+
+    <style>
+        a {
+            color: white
+        }
+
+        .active {
+            color: #007bff;
+        }
+
+        .bg-light1 {
+            background: #1b4670;
+            color: White;
+
+        }
+
+        .btn:not(:disabled):not(.disabled) {
+            background-color: #1b4670;
+
+        }
+
+        * {
+            font-family: "Book Antiqua";
+        }
+
+    </style>
+
+
+</head>
+<body style="background:#E9ECEF;">
+<!-- Navbar -->
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top  bg-light1">
+
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/crop.png' %}" alt="" width="10%" style="margin-top: -10px;">
+            <span class="name pull-left">  CROP  </span>
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link {% block user_home %} {% endblock %}" href="/"> Home </a>#}-->
+<!--                    </li>-->
+                <li class="nav-item">
+                    <a class="nav-link {% block  add_data %} {% endblock %}" href="{% url 'users_:add_data' %}"> Add
+                        Data </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block view_data %} {% endblock %}" href="{% url 'users_:view_data' %}">View
+                        Data</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% block Ml_result %} {% endblock %}"
+                       href="{% url 'users_:user_classification' %}">Ml_Algo's</a>
+                </li>
+            </ul>
+
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">
+                <a href="{% url 'user_login' %}">Logout </a>
+            </button>
+
+        </div>
+    </nav>
+
+</header>
+<br><br><br><br><br><br><br><br>
+<section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+        <h1 style="color:teal; font-weight:bold;">Intelligent Crop Recommendation System using Machine Learning
+            System</h1>
+    </div>
+</section>
+
+
+{% block content %}
+
+{% endblock %}
+
+
+<!-- Footer -->
+
+<footer class="page-footer font-small  bg-light1">
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+        <a href="#"> CROP</a>
+    </div>
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

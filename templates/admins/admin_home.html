@@ -1,0 +1,184 @@
+{% extends 'admins/admin_base.html' %}
+{% block title %}
+    Admin || Home
+{% endblock %}
+{% block content %}
+    {% load static %}
+
+
+    <p class="breadcrumb" style="height: 55px; ">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">
+            <span style="color: red;">Admin Logged in ❕</span>
+        </li>
+    </ol>
+    </p>
+    <section>
+
+        <div class="jumbotron">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1>
+                            Intelligent Crop Recommendation System
+                            using Machine Learning
+                        </h1>
+                        <p>
+                            The proposed system helps the farmers to
+                            choose the right crop by providing insights that
+                            ordinary farmers don't keep track of thereby
+                            decreasing the chances of crop failure and
+                            increasing productivity
+                        </p>
+                        <button type="button" class="btn btn-primary btn-lg ">
+                            <a href="#headingOne1" class="text-white"> Learn More</a>
+                        </button>
+
+                    </div>
+                    <div class="col-md-5">
+                        <img src="{% static 'images/bg-hero.jpg' %}" class="img-fluid" alt="Responsive image">
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Accordion -->
+    <section style="font-family: 'Book Antiqua'; text-align: justify; margin-top: -10rem;">
+
+
+        <div class="jumbotron" style="margin-bottom: -100px;">
+            <h1 style="text-align: center; font-family: 'Book Antiqua';"> About Project</h1>
+            <div class="container">
+
+                <!--Accordion wrapper-->
+                <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                    <!-- Accordion card -->
+                    <div class="card">
+
+                        <!-- Card header -->
+
+                        <div class="card-header btn" role="tab" id="headingOne1">
+                            <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1"
+                               aria-expanded="true"
+                               aria-controls="collapseOne1">
+                                <h5 class="mb-0 btn btn-primary">
+                                    Abstract &Darr; <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+
+                        <!-- Card body -->
+                        <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+                             data-parent="#accordionEx">
+                            <div class="card-body">
+                                Agriculture plays a vital role in the socioeconomic fabric of India. Failure of
+                                farmers
+                                to decide
+                                on the best-suited crop for the land using
+                                traditional and non-scientific methods is a serious
+                                issue for a country where approximately 58 percent
+                                of the population is involved in farming. Sometimes
+                                farmers were failed to choose the right crops based on
+                                the soil conditions, sowing season, and geographical
+                                location. This results in suicide, quitting the agriculture
+                                field, moving towards urban areas for livelihood. To
+                                overcome this issue, this research work has proposed a
+                                system to assist the farmers in crop selection by
+                                considering all the factors like sowing season, soil, and
+                                geographical location. Furthermore, precision
+                                agriculture is being implemented with a modern
+                                agricultural technology and it is evolving in developing
+                                countries that concentrates on site-specific crop
+                                management.
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Accordion card -->
+
+                    <!-- Accordion card -->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-header btn" role="tab" id="headingTwo2">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx"
+                               href="#collapseTwo2"
+                               aria-expanded="false" aria-controls="collapseTwo2">
+                                <h5 class="mb-0 btn btn-primary">
+                                    Keywords &Darr; <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+
+                        <!-- Card body -->
+                        <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                             data-parent="#accordionEx">
+                            <div class="card-body">
+                                <ul>
+                                    <li>Agriculture</li>
+                                    <li>Crop Recommendation,</li>
+                                    <li>Machine Learning</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Accordion card -->
+
+                    <!-- Accordion card -->
+                    <div class="card">
+
+                        <!-- Card header -->
+                        <div class="card-header btn" role="tab" id="headingThree3">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx"
+                               href="#collapseThree3"
+                               aria-expanded="false" aria-controls="collapseThree3">
+                                <h5 class="mb-0 btn btn-primary">
+                                    Conclusion &Darr; <i class="fas fa-angle-down rotate-icon"></i>
+                                </h5>
+                            </a>
+                        </div>
+
+                        <!-- Card body -->
+                        <div id="collapseThree3" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                             data-parent="#accordionEx">
+                            <div class="card-body">
+                                The proposed system helps the farmers to
+                                choose the right crop by providing insights that
+                                ordinary farmers don't keep track of thereby
+                                decreasing the chances of crop failure and
+                                increasing productivity. It also prevents them from
+                                incurring losses. In the future, it has been planned
+                                to incorporate a web interface as well as a mobile
+                                app to provide the recommendations of crop
+                                cultivation to the farmers can be accessed by
+                                millions of farmers across the country.
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Accordion card -->
+
+                </div>
+
+            </div>
+            <p style="margin-top: 150px;">
+
+            </p>
+            <!-- Accordion -->
+        </div>
+
+    </section>
+
+
+{% endblock %}
+

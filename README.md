@@ -2,7 +2,9 @@
  Intelligent Crop Recommendation System using Machine Learning
  
 
-* Libraries installation versions
+* Installation versions
+
+python 3.7.2
   
 pip install Django == 2.2
 

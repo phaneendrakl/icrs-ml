@@ -1,2 +1,16 @@
 # icrs-ml
- Intelligent Crop Recomendation System using Machine Learning
+ Intelligent Crop Recommendation System using Machine Learning
+
+* Libraries installation versions
+pip install Django == 2.2
+pip install pandas == 1.0.1
+pip install sklearn == 0.0
+
+*Commands to run project
+Django-admin startproject project name (run project)
+python manage.py startapp appname (application creation)
+python manage.py runserver (server run)
+
+*Create virtual environment
+python -m venv name
+name/scripts/activate (activate)
